@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> Contato - Barbearia Alura </title>
+		<link rel="stylesheet"  href="reset.css"> <!- primeiro limpa o css e depois vem as alterações ->
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da barbearia Alura"></h1>
+				<nav> <! - tag que cria um link com outra página ou outras áreas da mesma página ->
+					<ul>
+						<li><a href="index.html">Home</a></li> <!- tag "a" cria um link com referência -> 
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li> 
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+
+		<main>
+			<form> <!- tag p/ formulário ->
+				<label for="nomesobrenome">Nome e Sobrenome</label> <!- etiqueta do input. sempre ligar com input através do for="" ->
+				<input type="text" id="nomesobrenome" class="input-padrao" required> <!- Entrada de dados + tipo da entrada + id->
+
+				<label for="email">Email</label>
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"> <!- required torna obrigatório o preenchimento->
+
+				<label for="telefone">Telefone</label> <!- tipo de input é importante para usabilidade no preenchimento ->
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<label for="mensagem">Mensagem</label>
+				<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea> <!- melhor opção para receber varios caracteres ->
+
+				<fieldset> <!- tag usada para campo de preenchimento ex: cartão de crédito.->
+
+					<legend>Como prefere o nosso contato?</legend>
+
+					<p><label><input type="radio" name="contato" value="email" id="radio-email" class="input-contato"> Email</label></p>
+					
+
+					<p><label><input type="radio" name="contato" value="telefone" id="radio-telefone" class="input-contato"> Telefone</label></p>
+					
+
+					<p><label><input type="radio" name="contato" value="whatsapp" id="Whatsapp" class="input-contato" checked> Whatsapp</label><p>
+					 <!- com name=contato nos 3 input é permitido marcar apenas um como opção ->
+				</fieldset>
+
+				<fieldset>
+
+					<legend> Qual horário prefere ser atendido? </legend> <!- legend equivale ao parágrafo para fieldset ->
+
+					<select>
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+
+				</fieldset>
+
+				<label><input type="checkbox" class="checkbox" checked>Gostaria de receber nossas novidades por email?</label> 
+				<!- cheked deixa o campo já marcado ->
+
+
+				<p><input type="submit" value="Enviar formulário" class="enviar"><p>
+
+			</form>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Dia</th>
+						<th>Horário</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					
+
+					<tr>
+						<td>Segunda</td>
+						<td>8h ~ 20h</td>
+					</tr>
+
+					<tr>
+						<td>Terça</td>
+						<td>8h ~ 20h</td>
+					</tr>
+
+					<tr>
+						<td>Quarta</td>
+						<td>8h ~ 20h</td>
+					</tr>
+			
+				</tbody>
+
+			</table>
+		</main>
+
+		<footer>
+			<img src="logo-branco.png" alt="Logo da barbearia Alura"> 
+			<p class="copyright">&copy; Copyriht Barbearia Alura - 2019
+		</footer>
+
+	</body>
